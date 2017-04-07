@@ -1102,6 +1102,10 @@ declare namespace Github {
     & Owner
     & Repo
     ;
+  export type OrgsCheckTeamMembershipParams =
+    & Id
+    & Username
+    ;
   export type OrgsAddTeamRepoParams =
     & Id
     & Org
@@ -2773,6 +2777,7 @@ declare class Github {
     getTeamRepos(params: Github.OrgsGetTeamReposParams, callback?: Github.Callback): Promise<any>;
     getPendingTeamInvites(params: Github.OrgsGetPendingTeamInvitesParams, callback?: Github.Callback): Promise<any>;
     checkTeamRepo(params: Github.OrgsCheckTeamRepoParams, callback?: Github.Callback): Promise<any>;
+    checkTeamMembership(params: Github.OrgsCheckTeamMembershipParams, callback?: Github.Callback): Promise<any>;
     addTeamRepo(params: Github.OrgsAddTeamRepoParams, callback?: Github.Callback): Promise<any>;
     deleteTeamRepo(params: Github.OrgsDeleteTeamRepoParams, callback?: Github.Callback): Promise<any>;
     getHooks(params: Github.OrgsGetHooksParams, callback?: Github.Callback): Promise<any>;

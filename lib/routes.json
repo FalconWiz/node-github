@@ -3320,6 +3320,15 @@
             },
             "description": "Check if a team manages a repository"
         },
+        "check-team-membership": {
+            "url": "/teams/:id/memberships/:username",
+            "method": "GET",
+            "params": {
+                "$id": null,
+                "$username": null
+            },
+            "description": "Check if a user is a member of a team"
+        },
         "add-team-repo": {
             "url": "/teams/:id/repos/:org/:repo",
             "method": "PUT",

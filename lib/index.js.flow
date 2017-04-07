@@ -1097,6 +1097,10 @@ declare module "github" {
     & Owner
     & Repo
     ;
+  declare type OrgsCheckTeamMembershipParams =
+    & Id
+    & Username
+    ;
   declare type OrgsAddTeamRepoParams =
     & Id
     & Org
@@ -2758,6 +2762,7 @@ declare module "github" {
       getTeamRepos(params: OrgsGetTeamReposParams, callback?: Callback): Promise<any>;
       getPendingTeamInvites(params: OrgsGetPendingTeamInvitesParams, callback?: Callback): Promise<any>;
       checkTeamRepo(params: OrgsCheckTeamRepoParams, callback?: Callback): Promise<any>;
+      checkTeamMembership(params: OrgsCheckTeamMembershipParams, callback?: Callback): Promise<any>;
       addTeamRepo(params: OrgsAddTeamRepoParams, callback?: Callback): Promise<any>;
       deleteTeamRepo(params: OrgsDeleteTeamRepoParams, callback?: Callback): Promise<any>;
       getHooks(params: OrgsGetHooksParams, callback?: Callback): Promise<any>;

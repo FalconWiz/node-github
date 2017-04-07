@@ -127,6 +127,20 @@ describe("[orgs]", function() {
         );
     });
 
+    it("should successfully execute GET /teams/:id/memberships/:username (checkTeamMembership)",  function(next) {
+        client.orgs.checkTeamMembership(
+            {
+                id: "String",
+                username: "String"
+            },
+            function(err, res) {
+                Assert.equal(err, null);
+                // other assertions go here
+                next();
+            }
+        );
+    });
+
     it("should successfully execute GET /teams/:id/repos/:owner/:repo (checkTeamRepo)",  function(next) {
         client.orgs.checkTeamRepo(
             {
